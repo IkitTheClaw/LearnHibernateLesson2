@@ -1,10 +1,10 @@
 package org.hiber.dao;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.hiber.model.Car;
 import org.hiber.model.User;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,18 +13,17 @@ import java.util.List;
 @Transactional
 public class UserDaoImpl implements UserDao {
 
-    @Autowired
-    private final SessionFactory sessionFactory;
+    @PersistenceContext
+    private final EntityManager entityManager;
 
-    public UserDaoImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
+    public UserDaoImpl(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     public void addCarToUser(Long userId, Car car) {
-
     }
 
-    public void addUser(User user) {
+    public void saveUser(User user) {
 
     }
 

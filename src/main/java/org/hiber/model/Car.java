@@ -1,7 +1,9 @@
 package org.hiber.model;
 
+import java.util.List;
+
 public class Car {
     private Long id;
     private String model;
-    private User owner;
+    private List<User> owner;
 }

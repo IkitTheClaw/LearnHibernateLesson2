@@ -21,28 +21,42 @@ public class UserServiceImpl implements UserService{
     public void addCarToUser(Long userId, Car car) {
 
     }
-
+    @Override
     public void addUser(User user) {
 
     }
-
+    @Override
     public void removeCarFromUser(Long userId, Long carId) {
 
     }
 
+    @Override
+    public void removeCar(Long carId) {
+
+    }
+
+    @Override
+    public void removeUser(Long userId) {
+
+    }
+
+    @Override
     public List<User> getAllUsers() {
         return null;
     }
 
+    @Override
     public User getUserById(Long id) {
         return null;
     }
 
+    @Override
     public List<Car> getCarsByUserId(Long userId) {
         return null;
     }
 
-    public Car getCarById(Long id) {
+    @Override
+    public Car getCarByCarId(Long id) {
         return null;
     }
 }
