@@ -23,10 +23,10 @@ public class UserServiceImpl implements UserService{
     }
     @Override
     public void addUser(User user) {
-
+        userDao.saveUser(user);
     }
     @Override
-    public void removeCarFromUser(Long userId, Long carId) {
+    public void removeCarFromUser(Long carId) {
 
     }
 
@@ -42,21 +42,21 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public List<User> getAllUsers() {
-        return null;
+        return userDao.getAllUsers();
     }
 
     @Override
     public User getUserById(Long id) {
-        return null;
+        return userDao.getUserById(id);
     }
 
     @Override
     public List<Car> getCarsByUserId(Long userId) {
-        return null;
+        return userDao.getCarsByUserId(userId);
     }
 
     @Override
     public Car getCarByCarId(Long id) {
-        return null;
+        return userDao.getCarById(id);
     }
 }

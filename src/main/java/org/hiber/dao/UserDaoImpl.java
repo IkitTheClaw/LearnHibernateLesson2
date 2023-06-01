@@ -2,6 +2,7 @@ package org.hiber.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 import org.hiber.model.Car;
 import org.hiber.model.User;
@@ -21,29 +22,62 @@ public class UserDaoImpl implements UserDao {
     }
 
     public void addCarToUser(Long userId, Car car) {
+        entityManager.getTransaction().begin();
+        entityManager.find(User.class,userId);
+        entityManager.merge(car);
+        entityManager.persist(entityManager.find(User.class,userId));
+        entityManager.getTransaction().commit();
+
     }
 
+    @Override
     public void saveUser(User user) {
-
+        entityManager.getTransaction().begin();
+        entityManager.persist(user);
+        entityManager.getTransaction().commit();
     }
 
-    public void removeCarFromUser(Long userId, Long carId) {
-
+    @Override
+    public void removeCarFromUser(Long carId) {
+        entityManager.getTransaction().begin();
+        Car car = entityManager.find(Car.class, carId);
+        User user = entityManager.find(User.class,car);
+        entityManager.remove(car);
+        entityManager.getTransaction().commit();
     }
 
+    @Override
     public List<User> getAllUsers() {
-        return null;
+        List<User> userList;
+        String sql = "FROM User";
+
+        Query query = entityManager.createQuery(sql);
+        entityManager.getTransaction().begin();
+        userList = query.getResultList();
+        entityManager.getTransaction().commit();
+        return userList;
     }
 
     public User getUserById(Long id) {
-        return null;
+        User user;
+        entityManager.getTransaction().begin();
+        user = entityManager.find(User.class, id);
+        entityManager.getTransaction().commit();
+        return user;
     }
 
     public List<Car> getCarsByUserId(Long userId) {
+        Car car ;
+        entityManager.getTransaction().begin();
+        car = entityManager.find(Car.class,userId);
+        entityManager.getTransaction().commit();
         return null;
     }
 
     public Car getCarById(Long id) {
-        return null;
+        entityManager.getTransaction().begin();
+        Car searchedCar = entityManager.find(Car.class, id);
+        entityManager.getTransaction().commit();
+        return searchedCar;
     }
 }

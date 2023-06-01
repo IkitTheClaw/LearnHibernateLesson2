@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cdab8e7-26fd-49bc-b848-8f6f58630a15" name="Changes" comment="Fixed lesson">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/hiber/exception/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/dao/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/model/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +31,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="adda94fd-6722-4d70-aa74-b9d96012ffd1" />
+        <option name="url" value="https://github.com/IlyaBabich1994/LearnHibernateLesson2.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -61,7 +72,14 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;4c0394d4297a7bee78d865db67d9166a&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4c0394d4297a7bee78d865db67d9166a&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -69,7 +87,25 @@
       <recent name="C:\Users\ktljv\IdeaProjects\LearnHibernateLesson2\src\main\resources\META-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.Docker Image">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.hiber.App" />
+      <module name="LearnHibernateLesson2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.hiber.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LearnHibernateLesson2" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -105,9 +141,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.App" />
       <item itemvalue="Docker.Docker Image" />
       <item itemvalue="Maven.LearnHibernateLesson2" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,6 +167,10 @@
       <workItem from="1684784886048" duration="616000" />
       <workItem from="1684791234067" duration="2822000" />
       <workItem from="1685467513587" duration="2486000" />
+      <workItem from="1685472991725" duration="14804000" />
+      <workItem from="1685534792092" duration="6485000" />
+      <workItem from="1685620745945" duration="3236000" />
+      <workItem from="1685649051897" duration="653000" />
     </task>
     <servers />
   </component>
@@ -145,5 +191,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed lesson" />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed lesson" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.hibernate.PersistentObjectException" package="org.hibernate" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

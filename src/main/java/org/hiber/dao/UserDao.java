@@ -12,7 +12,7 @@ public interface UserDao {
 
     void saveUser(User user);
 
-    void removeCarFromUser(Long userId, Long carId);
+    void removeCarFromUser(Long carId);
 
     List<User> getAllUsers();
 
