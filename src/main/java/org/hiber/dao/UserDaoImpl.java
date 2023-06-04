@@ -23,9 +23,11 @@ public class UserDaoImpl implements UserDao {
 
     public void addCarToUser(Long userId, Car car) {
         entityManager.getTransaction().begin();
-        entityManager.find(User.class,userId);
-        entityManager.merge(car);
-        entityManager.persist(entityManager.find(User.class,userId));
+        User user = entityManager.find(User.class, userId);
+        List<Car> carListTemp = user.getCarList();
+        carListTemp.add(car);
+        user.setCarList(carListTemp);
+        entityManager.persist(user);
         entityManager.getTransaction().commit();
 
     }
@@ -38,11 +40,13 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public void removeCarFromUser(Long carId) {
+    public void removeCarFromUser(Long carId, Long userId) {
         entityManager.getTransaction().begin();
-        Car car = entityManager.find(Car.class, carId);
-        User user = entityManager.find(User.class,car);
-        entityManager.remove(car);
+        User user = entityManager.find(User.class, userId);
+        List<Car> carListTemp = user.getCarList();
+        carListTemp.remove(entityManager.find(Car.class, carId));
+        user.setCarList(carListTemp);
+        entityManager.persist(user);
         entityManager.getTransaction().commit();
     }
 
@@ -67,11 +71,18 @@ public class UserDaoImpl implements UserDao {
     }
 
     public List<Car> getCarsByUserId(Long userId) {
-        Car car ;
+        List<Car> carList;
+        List<User> userList;
         entityManager.getTransaction().begin();
-        car = entityManager.find(Car.class,userId);
+        String sql = "FROM User WHERE id = " + userId;
+        Query query = entityManager.createQuery(sql);
+        userList = query.getResultList();
+        carList = userList.get(0).getCarList();
+        for (int i = 0; i < carList.size(); i++) {
+            System.out.println(carList.get(i).getModel());
+        }
         entityManager.getTransaction().commit();
-        return null;
+        return carList;
     }
 
     public Car getCarById(Long id) {

@@ -1,5 +1,6 @@
 package org.hiber.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,7 +20,8 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY )
-    @JoinColumn(name = "car")
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy = "owner",
+            fetch = FetchType.LAZY)
     private List<Car> carList;
 }

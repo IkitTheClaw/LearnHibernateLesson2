@@ -10,9 +10,9 @@ public interface UserService {
 
     void addUser(User user);
 
-    void removeCarFromUser(Long carId);
+    void removeCarFromUser(Long carId,Long userId);
 
-    void removeCar(Long carId);
+    void removeCar(Long carId,Long userId);
 
     void removeUser(Long userId);
 

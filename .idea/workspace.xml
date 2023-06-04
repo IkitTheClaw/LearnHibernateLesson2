@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cdab8e7-26fd-49bc-b848-8f6f58630a15" name="Changes" comment="Fixed lesson">
+    <list default="true" id="1cdab8e7-26fd-49bc-b848-8f6f58630a15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/App.java" afterDir="false" />
@@ -14,7 +14,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hiber/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,8 +169,21 @@
       <workItem from="1685472991725" duration="14804000" />
       <workItem from="1685534792092" duration="6485000" />
       <workItem from="1685620745945" duration="3236000" />
-      <workItem from="1685649051897" duration="653000" />
+      <workItem from="1685649051897" duration="2363000" />
+      <workItem from="1685708827109" duration="2747000" />
+      <workItem from="1685747850546" duration="761000" />
+      <workItem from="1685789848755" duration="6896000" />
+      <workItem from="1685876481832" duration="1701000" />
+      <workItem from="1685885999526" duration="1648000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed lesson_0.2">
+      <created>1685649757228</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685649757228</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +202,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed lesson" />
+    <MESSAGE value="Fixed lesson_0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed lesson_0.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

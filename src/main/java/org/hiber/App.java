@@ -12,6 +12,7 @@ import org.hiber.service.UserServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Hello world!
@@ -25,6 +26,7 @@ public class App
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         UserDao userDao = new UserDaoImpl(entityManager);
         UserService userService = new UserServiceImpl(userDao);
+        Scanner scanner = new Scanner(System.in);
 
         //userService.getAllUsers().stream().forEach(System.out::println);
         User user = User.builder()
@@ -36,14 +38,25 @@ public class App
                 .model("Mustang")
                 .owner(user)
                 .build();
+        Car car1 = Car.builder().
+                model("Shevrole")
+                .owner(user)
+                .build();
         List<Car> carList = new ArrayList<>();
         carList.add(car);
         user.setCarList(carList);
         userService.addUser(user);
         System.out.println(userService.getAllUsers());
-       // Car car1 = Car.builder()
-        //        .model("Shevrole")
-        //        .owner(user)
-         //       .build();
+        System.out.println("Список машин пользователя под индексом _ -");
+        System.out.println(userService.getCarsByUserId(scanner.nextLong()));
+        System.out.println("Какому пользователю вы хотите отдать машину? ");
+        userService.addCarToUser(scanner.nextLong(), car1);
+        System.out.println("Список машин пользователя под индексом _ -");
+        System.out.println(userService.getCarsByUserId(scanner.nextLong()));
+        System.out.println("модель машины под индексом _ -");
+        System.out.println(userService.getCarByCarId(1L).getModel());
+        userService.removeCarFromUser(1L, scanner.nextLong());
+        System.out.println("Федералы нашли 12 киллограмм мета в машине ,они её конфисковали на корпаратив");
+        System.out.println(userService.getCarsByUserId(scanner.nextLong()));
     }
 }

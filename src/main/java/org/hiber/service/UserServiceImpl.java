@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private final UserDao userDao;
 
@@ -19,20 +19,22 @@ public class UserServiceImpl implements UserService{
     }
 
     public void addCarToUser(Long userId, Car car) {
-
+        userDao.addCarToUser(userId, car);
     }
+
     @Override
     public void addUser(User user) {
         userDao.saveUser(user);
     }
-    @Override
-    public void removeCarFromUser(Long carId) {
 
+    @Override
+    public void removeCarFromUser(Long carId, Long userId) {
+        userDao.removeCarFromUser(carId, userId);
     }
 
     @Override
-    public void removeCar(Long carId) {
-
+    public void removeCar(Long carId, Long userId) {
+        userDao.removeCarFromUser(carId, userId);
     }
 
     @Override
